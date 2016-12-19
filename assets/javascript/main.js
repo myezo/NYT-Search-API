@@ -16,7 +16,7 @@ $.ajax({
   var articlesArray = result.response.docs;
   console.log(articlesArray);
 
-  for(var i = 0; i < result.data.length){
+  for(var i = 0; i < result.length; i++){
       title = article.headline.main;
   }
   
