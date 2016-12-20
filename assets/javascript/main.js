@@ -19,16 +19,30 @@ $.ajax({
   console.log(articlesArray);
 
   for(var i = 0; i < articlesArray.length; i++){
+      
+      //set variables to API results
       title = articlesArray[i].headline.main;
       snippetText = articlesArray[i].snippet;
       date = articlesArray[i].pub_date;
       articleURL = articlesArray[i].web_url;
       multimediaArray = articlesArray[i].multimedia;
       
+      //testing for loop
       console.log(title + "\n " + snippetText + "\n " + date + "\n " + articleURL);
-      titleDiv = $('<h3>');
-      titleDiv.text(title[i])
-      $('#title').append(titleDiv);
+      
+
+      var articleWrapper = $("<div>");
+
+      var articleResults = $("<div>").addClass("media")
+                            .append( $("<h4>").addClass("media-heading").text(title) )
+                            .append( $("<p>").addClass("media-object").text(snippetText) )
+                            .append( $("<p>").addClass("media-object").text(date) )
+                            .append( $("<a>").addClass("media-object").attr("href", articleURL)
+                            .html("<p>Read More</p>"));
+
+      articleWrapper.append(articleResults);
+
+      $('#search-results').append(articleWrapper);
   }
   
 
