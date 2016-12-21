@@ -1,11 +1,16 @@
 *{
-	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-	box-sizing: border-box;
-	color: black;
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  box-sizing: border-box;
+  color: black;
 }
 
 span{
   color: white;
+}
+
+button{
+  float: left;
+  margin: 5px;
 }
 
 .jumbotron {
@@ -22,7 +27,6 @@ span{
     background-color: rgba(158, 158, 158, 0.26);
     padding: 10px;
     margin: 20px;
-
 }
 
 .media{
